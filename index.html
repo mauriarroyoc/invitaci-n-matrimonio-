@@ -413,8 +413,8 @@ footer{font-size:clamp(37px,6vw,50px)}
 
 <footer>Con amor, <span id="footerNames">Lisette y Mauricio</span> ♡</footer>
 <button aria-label="Reproducir música" class="music" id="musicBtn" title="Reproducir música">♫</button>
-<audio id="audio" loop="" preload="auto" autoplay playsinline></audio>
-<div class="music-notice" id="musicNotice" hidden><span>🎶 Disfruta nuestra canción</span><button type="button" id="startMusic">Activar música ♫</button><button type="button" id="hideMusicNotice" aria-label="Cerrar aviso">×</button></div>
+<audio id="audio" src="musica.mp3" loop preload="auto" autoplay playsinline></audio>
+<div class="music-notice" id="musicNotice" hidden><span>♡ Bienvenidos a nuestra boda</span><button type="button" id="startMusic">Abrir con música ♫</button><button type="button" id="hideMusicNotice" aria-label="Continuar sin música">×</button></div>
 
 <script>
 const CONFIG = {
@@ -479,6 +479,7 @@ Confirmación: ${$('answer').value}.`;
 };
 const audio = $('audio');
 audio.src = CONFIG.musicaArchivo;
+audio.volume = 0.85;
 function updateMusicButton() {
   const playing = !audio.paused;
   $('musicBtn').textContent = playing ? '❚❚' : '♫';
@@ -496,8 +497,16 @@ $('startMusic').addEventListener('click', async () => {
   try { await audio.play(); }
   catch (_) { alert('No se pudo iniciar la música. Revisa que musica.mp3 esté en la misma carpeta.'); }
 });
-$('hideMusicNotice').addEventListener('click', () => { $('musicNotice').hidden = true; });
-window.addEventListener('load', iniciarMusicaAlAbrir);
+$('hideMusicNotice').addEventListener('click', () => { window.__musicDismissed = true; $('musicNotice').hidden = true; });
+// Intentar en cuanto el código queda listo, sin esperar imágenes ni galería.
+iniciarMusicaAlAbrir();
+// Segundo intento si el navegador habilita sonido en el primer gesto de la visita.
+const primerGestoMusical = () => {
+  if (audio.paused && !window.__musicDismissed) audio.play().catch(() => {});
+};
+document.addEventListener('pointerdown', primerGestoMusical, {passive:true});
+document.addEventListener('keydown', primerGestoMusical);
+
 
 audio.addEventListener('pause', updateMusicButton);
 $('musicBtn').onclick = async () => {
