@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="#f8f5ef" name="theme-color"/>
+<title>Lisette &amp; Mauricio | ¡Nos casamos!</title>
+<meta content="Acompáñanos en el día más especial de nuestra historia." name="description"/>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap');
+:root{
+  --gold:#b59a69;
+  --gold-soft:#d5c09a;
+  --brown:#62584d;
+  --taupe:#cbbda4;
+  --paper:#faf7f1;
+  --paper-deep:#f3eee4;
+  --leaf:#6a8668;
+  --ink:#6a6054;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  font: 13px/1.85 Montserrat,sans-serif;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(169,182,145,.11), transparent 18%),
+    radial-gradient(circle at 85% 80%, rgba(194,180,145,.10), transparent 16%),
+    repeating-linear-gradient(135deg, rgba(181,157,111,.018) 0 5px, transparent 5px 10px),
+    var(--paper);
+}
+a{color:inherit}
+header{position:fixed;z-index:30;inset:0 0 auto 0;height:68px;background:rgba(250,247,241,.94);backdrop-filter:blur(8px);display:flex;justify-content:space-between;align-items:center;padding:0 22px;box-shadow:0 1px 12px rgba(0,0,0,.05)}
+.monogram{font: 400 34px 'Cormorant Garamond',serif;color:var(--gold);letter-spacing:.04em}
+.menu-btn{appearance:none;border:0;background:transparent;color:var(--brown);font-size:30px;cursor:pointer;line-height:1}
+nav{position:fixed;z-index:29;top:68px;right:0;width:min(320px,100%);max-height:calc(100vh - 68px);overflow:auto;padding:18px;background:rgba(250,247,241,.98);box-shadow:0 10px 26px rgba(0,0,0,.08);transform:translateX(104%);transition:transform .3s ease}
+nav.open{transform:translateX(0)}
+nav a{display:block;text-decoration:none;padding:10px 12px;border-bottom:1px solid #e6dece;font-size:13px}
+main{overflow:hidden}
+section{position:relative;padding:92px 22px 78px;text-align:center;overflow:hidden}
+section.paper{background:var(--paper-deep)}
+.inner{position:relative;z-index:2;max-width:760px;margin:0 auto}
+.fade{opacity:0;transform:translateY(20px);transition:opacity .8s ease, transform .8s ease}
+.fade.visible{opacity:1;transform:none}
+.botanical{position:absolute;z-index:0;background-repeat:no-repeat;background-size:contain;pointer-events:none;opacity:.96}
+.botanical.left{left:-26px;bottom:-18px;width:210px;height:230px;background-image:url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20360%20360%27%3E%20%3Cdefs%3E%20%3ClinearGradient%20id%3D%27lg1%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%20%3Cstop%20offset%3D%270%27%20stop-color%3D%27%2393b07e%27/%3E%20%3Cstop%20offset%3D%271%27%20stop-color%3D%27%234d6c54%27/%3E%20%3C/linearGradient%3E%20%3ClinearGradient%20id%3D%27lg2%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%20%3Cstop%20offset%3D%270%27%20stop-color%3D%27%23c9d6ab%27/%3E%20%3Cstop%20offset%3D%271%27%20stop-color%3D%27%236a8960%27/%3E%20%3C/linearGradient%3E%20%3ClinearGradient%20id%3D%27stem%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%270%27%20y2%3D%271%27%3E%20%3Cstop%20offset%3D%270%27%20stop-color%3D%27%2350754c%27/%3E%20%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23345238%27/%3E%20%3C/linearGradient%3E%20%3C/defs%3E%20%3Cg%20opacity%3D%270.95%27%3E%20%3Cpath%20d%3D%27M78%20305%20C55%20250%2C%2042%20190%2C%2046%20136%20C86%20163%2C%20122%20202%2C%20152%20255%20C126%20274%2C%20102%20289%2C%2078%20305%20Z%27%20fill%3D%27url%28%23lg1%29%27/%3E%20%3Cpath%20d%3D%27M120%20295%20C102%20232%2C%20100%20164%2C%20126%20104%20C167%20138%2C%20196%20185%2C%20214%20243%20C183%20263%2C%20152%20279%2C%20120%20295%20Z%27%20fill%3D%27url%28%23lg2%29%27/%3E%20%3Cpath%20d%3D%27M160%20268%20C149%20213%2C%20154%20153%2C%20185%2092%20C228%20130%2C%20255%20180%2C%20268%20229%20C235%20243%2C%20197%20256%2C%20160%20268%20Z%27%20fill%3D%27url%28%23lg1%29%27/%3E%20%3Cpath%20d%3D%27M37%20237%20C76%20247%2C%20120%20274%2C%20151%20304%27%20stroke%3D%27%236a8d67%27%20stroke-width%3D%275%27%20fill%3D%27none%27%20opacity%3D%27.4%27/%3E%20%3Cpath%20d%3D%27M107%20138%20C146%20176%2C%20178%20228%2C%20204%20283%27%20stroke%3D%27%236a8d67%27%20stroke-width%3D%275%27%20fill%3D%27none%27%20opacity%3D%27.35%27/%3E%20%3Cpath%20d%3D%27M169%20111%20C201%20156%2C%20228%20206%2C%20250%20252%27%20stroke%3D%27%236a8d67%27%20stroke-width%3D%275%27%20fill%3D%27none%27%20opacity%3D%27.35%27/%3E%20%3Cpath%20d%3D%27M233%20302%20C201%20251%2C%20195%20188%2C%20216%20124%20C262%20165%2C%20297%20219%2C%20316%20277%20C289%20288%2C%20262%20296%2C%20233%20302%20Z%27%20fill%3D%27url%28%23lg2%29%27%20opacity%3D%27.95%27/%3E%20%3Cpath%20d%3D%27M224%20142%20C266%20169%2C%20307%20214%2C%20332%20257%27%20stroke%3D%27%2364835f%27%20stroke-width%3D%275%27%20fill%3D%27none%27%20opacity%3D%27.4%27/%3E%20%3Cpath%20d%3D%27M37%20236%20C42%20196%2C%2054%20158%2C%2080%20118%27%20stroke%3D%27url%28%23stem%29%27%20stroke-width%3D%276%27%20fill%3D%27none%27/%3E%20%3Cpath%20d%3D%27M72%20167%20C90%20156%2C%20109%20145%2C%20126%20128%27%20stroke%3D%27url%28%23stem%29%27%20stroke-width%3D%273%27%20fill%3D%27none%27/%3E%20%3Cpath%20d%3D%27M65%20188%20C87%20184%2C%20104%20180%2C%20121%20168%27%20stroke%3D%27url%28%23stem%29%27%20stroke-width%3D%273%27%20fill%3D%27none%27/%3E%20%3Cg%20transform%3D%27translate%286%2C45%29%20scale%281.08%29%27%3E%20%3Cpath%20d%3D%27M45%20195%20C62%20169%2C%2088%20149%2C%20117%20136%20C106%20170%2C%2083%20194%2C%2053%20208%20Z%27%20fill%3D%27%23f08a2d%27/%3E%20%3Cpath%20d%3D%27M59%20205%20C80%20179%2C%20108%20160%2C%20140%20146%20C129%20181%2C%20103%20206%2C%2068%20217%20Z%27%20fill%3D%27%23f1b347%27/%3E%20%3Cpath%20d%3D%27M73%20213%20C97%20188%2C%20127%20170%2C%20158%20159%20C145%20192%2C%20118%20218%2C%2084%20228%20Z%27%20fill%3D%27%23e0632c%27/%3E%20%3Cpath%20d%3D%27M42%20197%20C28%20177%2C%2025%20152%2C%2035%20128%20C58%20145%2C%2073%20168%2C%2075%20197%20Z%27%20fill%3D%27%236c8f57%27/%3E%20%3Cpath%20d%3D%27M48%20196%20C35%20181%2C%2032%20164%2C%2035%20146%27%20stroke%3D%27%2336513b%27%20stroke-width%3D%274%27%20fill%3D%27none%27/%3E%20%3Cpath%20d%3D%27M40%20196%20C34%20230%2C%2037%20255%2C%2048%20285%27%20stroke%3D%27%23446a45%27%20stroke-width%3D%275%27%20fill%3D%27none%27/%3E%20%3C/g%3E%20%3C/g%3E%20%3C/svg%3E')}
+.botanical.right{right:-28px;bottom:-14px;width:220px;height:235px;background-image:url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20360%20360%27%3E%20%3Cdefs%3E%20%3ClinearGradient%20id%3D%27lg1%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%20%3Cstop%20offset%3D%270%27%20stop-color%3D%27%2399b482%27/%3E%20%3Cstop%20offset%3D%271%27%20stop-color%3D%27%234f6f58%27/%3E%20%3C/linearGradient%3E%20%3ClinearGradient%20id%3D%27lg2%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%20%3Cstop%20offset%3D%270%27%20stop-color%3D%27%23d4ddb4%27/%3E%20%3Cstop%20offset%3D%271%27%20stop-color%3D%27%236f8f64%27/%3E%20%3C/linearGradient%3E%20%3C/defs%3E%20%3Cg%20opacity%3D%270.96%27%3E%20%3Cpath%20d%3D%27M298%20305%20C320%20254%2C%20328%20196%2C%20319%20141%20C279%20168%2C%20245%20208%2C%20218%20260%20C243%20277%2C%20269%20292%2C%20298%20305%20Z%27%20fill%3D%27url%28%23lg1%29%27/%3E%20%3Cpath%20d%3D%27M255%20294%20C271%20234%2C%20268%20171%2C%20241%20111%20C202%20146%2C%20173%20191%2C%20155%20245%20C186%20264%2C%20219%20281%2C%20255%20294%20Z%27%20fill%3D%27url%28%23lg2%29%27/%3E%20%3Cpath%20d%3D%27M214%20269%20C225%20215%2C%20218%20156%2C%20188%2095%20C145%20133%2C%20118%20184%2C%20105%20233%20C140%20247%2C%20176%20259%2C%20214%20269%20Z%27%20fill%3D%27url%28%23lg1%29%27/%3E%20%3Cpath%20d%3D%27M323%20237%20C286%20250%2C%20247%20275%2C%20216%20305%27%20stroke%3D%27%236b8d69%27%20stroke-width%3D%275%27%20fill%3D%27none%27%20opacity%3D%27.4%27/%3E%20%3Cpath%20d%3D%27M248%20140%20C213%20176%2C%20182%20227%2C%20163%20283%27%20stroke%3D%27%236b8d69%27%20stroke-width%3D%275%27%20fill%3D%27none%27%20opacity%3D%27.35%27/%3E%20%3Cpath%20d%3D%27M196%20109%20C164%20154%2C%20137%20204%2C%20116%20251%27%20stroke%3D%27%236b8d69%27%20stroke-width%3D%275%27%20fill%3D%27none%27%20opacity%3D%27.35%27/%3E%20%3Cg%20transform%3D%27translate%28192%2C114%29%27%3E%20%3Cpath%20d%3D%27M44%2095%20C61%2069%2C%2087%2049%2C%20116%2036%20C105%2070%2C%2082%2094%2C%2052%20108%20Z%27%20fill%3D%27%23f08a2d%27/%3E%20%3Cpath%20d%3D%27M58%20105%20C79%2079%2C%20107%2060%2C%20139%2046%20C128%2081%2C%20102%20106%2C%2067%20117%20Z%27%20fill%3D%27%23f1b347%27/%3E%20%3Cpath%20d%3D%27M72%20113%20C96%2088%2C%20126%2070%2C%20157%2059%20C144%2092%2C%20117%20118%2C%2083%20128%20Z%27%20fill%3D%27%23e0632c%27/%3E%20%3Cpath%20d%3D%27M41%2098%20C27%2078%2C%2024%2053%2C%2034%2029%20C57%2046%2C%2072%2069%2C%2074%2098%20Z%27%20fill%3D%27%236c8f57%27/%3E%20%3Cpath%20d%3D%27M46%2097%20C33%2082%2C%2030%2065%2C%2033%2047%27%20stroke%3D%27%2336513b%27%20stroke-width%3D%274%27%20fill%3D%27none%27/%3E%20%3Cpath%20d%3D%27M40%2097%20C34%20131%2C%2037%20156%2C%2048%20186%27%20stroke%3D%27%23446a45%27%20stroke-width%3D%275%27%20fill%3D%27none%27/%3E%20%3C/g%3E%20%3C/g%3E%20%3C/svg%3E')}
+.botanical.top-left{left:-24px;top:72px;width:205px;height:215px;background-image:url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20360%20360%27%3E%20%3Cdefs%3E%20%3ClinearGradient%20id%3D%27lg1%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%20%3Cstop%20offset%3D%270%27%20stop-color%3D%27%2393b07e%27/%3E%20%3Cstop%20offset%3D%271%27%20stop-color%3D%27%234d6c54%27/%3E%20%3C/linearGradient%3E%20%3ClinearGradient%20id%3D%27lg2%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%20%3Cstop%20offset%3D%270%27%20stop-color%3D%27%23c9d6ab%27/%3E%20%3Cstop%20offset%3D%271%27%20stop-color%3D%27%236a8960%27/%3E%20%3C/linearGradient%3E%20%3ClinearGradient%20id%3D%27stem%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%270%27%20y2%3D%271%27%3E%20%3Cstop%20offset%3D%270%27%20stop-color%3D%27%2350754c%27/%3E%20%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23345238%27/%3E%20%3C/linearGradient%3E%20%3C/defs%3E%20%3Cg%20opacity%3D%270.95%27%3E%20%3Cpath%20d%3D%27M78%20305%20C55%20250%2C%2042%20190%2C%2046%20136%20C86%20163%2C%20122%20202%2C%20152%20255%20C126%20274%2C%20102%20289%2C%2078%20305%20Z%27%20fill%3D%27url%28%23lg1%29%27/%3E%20%3Cpath%20d%3D%27M120%20295%20C102%20232%2C%20100%20164%2C%20126%20104%20C167%20138%2C%20196%20185%2C%20214%20243%20C183%20263%2C%20152%20279%2C%20120%20295%20Z%27%20fill%3D%27url%28%23lg2%29%27/%3E%20%3Cpath%20d%3D%27M160%20268%20C149%20213%2C%20154%20153%2C%20185%2092%20C228%20130%2C%20255%20180%2C%20268%20229%20C235%20243%2C%20197%20256%2C%20160%20268%20Z%27%20fill%3D%27url%28%23lg1%29%27/%3E%20%3Cpath%20d%3D%27M37%20237%20C76%20247%2C%20120%20274%2C%20151%20304%27%20stroke%3D%27%236a8d67%27%20stroke-width%3D%275%27%20fill%3D%27none%27%20opacity%3D%27.4%27/%3E%20%3Cpath%20d%3D%27M107%20138%20C146%20176%2C%20178%20228%2C%20204%20283%27%20stroke%3D%27%236a8d67%27%20stroke-width%3D%275%27%20fill%3D%27none%27%20opacity%3D%27.35%27/%3E%20%3Cpath%20d%3D%27M169%20111%20C201%20156%2C%20228%20206%2C%20250%20252%27%20stroke%3D%27%236a8d67%27%20stroke-width%3D%275%27%20fill%3D%27none%27%20opacity%3D%27.35%27/%3E%20%3Cpath%20d%3D%27M233%20302%20C201%20251%2C%20195%20188%2C%20216%20124%20C262%20165%2C%20297%20219%2C%20316%20277%20C289%20288%2C%20262%20296%2C%20233%20302%20Z%27%20fill%3D%27url%28%23lg2%29%27%20opacity%3D%27.95%27/%3E%20%3Cpath%20d%3D%27M224%20142%20C266%20169%2C%20307%20214%2C%20332%20257%27%20stroke%3D%27%2364835f%27%20stroke-width%3D%275%27%20fill%3D%27none%27%20opacity%3D%27.4%27/%3E%20%3Cpath%20d%3D%27M37%20236%20C42%20196%2C%2054%20158%2C%2080%20118%27%20stroke%3D%27url%28%23stem%29%27%20stroke-width%3D%276%27%20fill%3D%27none%27/%3E%20%3Cpath%20d%3D%27M72%20167%20C90%20156%2C%20109%20145%2C%20126%20128%27%20stroke%3D%27url%28%23stem%29%27%20stroke-width%3D%273%27%20fill%3D%27none%27/%3E%20%3Cpath%20d%3D%27M65%20188%20C87%20184%2C%20104%20180%2C%20121%20168%27%20stroke%3D%27url%28%23stem%29%27%20stroke-width%3D%273%27%20fill%3D%27none%27/%3E%20%3Cg%20transform%3D%27translate%286%2C45%29%20scale%281.08%29%27%3E%20%3Cpath%20d%3D%27M45%20195%20C62%20169%2C%2088%20149%2C%20117%20136%20C106%20170%2C%2083%20194%2C%2053%20208%20Z%27%20fill%3D%27%23f08a2d%27/%3E%20%3Cpath%20d%3D%27M59%20205%20C80%20179%2C%20108%20160%2C%20140%20146%20C129%20181%2C%20103%20206%2C%2068%20217%20Z%27%20fill%3D%27%23f1b347%27/%3E%20%3Cpath%20d%3D%27M73%20213%20C97%20188%2C%20127%20170%2C%20158%20159%20C145%20192%2C%20118%20218%2C%2084%20228%20Z%27%20fill%3D%27%23e0632c%27/%3E%20%3Cpath%20d%3D%27M42%20197%20C28%20177%2C%2025%20152%2C%2035%20128%20C58%20145%2C%2073%20168%2C%2075%20197%20Z%27%20fill%3D%27%236c8f57%27/%3E%20%3Cpath%20d%3D%27M48%20196%20C35%20181%2C%2032%20164%2C%2035%20146%27%20stroke%3D%27%2336513b%27%20stroke-width%3D%274%27%20fill%3D%27none%27/%3E%20%3Cpath%20d%3D%27M40%20196%20C34%20230%2C%2037%20255%2C%2048%20285%27%20stroke%3D%27%23446a45%27%20stroke-width%3D%275%27%20fill%3D%27none%27/%3E%20%3C/g%3E%20%3C/g%3E%20%3C/svg%3E');transform:scale(.92) rotate(14deg)}
+.botanical.top-right{right:-14px;top:88px;width:175px;height:190px;background-image:url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20360%20360%27%3E%20%3Cdefs%3E%20%3ClinearGradient%20id%3D%27lg1%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%20%3Cstop%20offset%3D%270%27%20stop-color%3D%27%2399b482%27/%3E%20%3Cstop%20offset%3D%271%27%20stop-color%3D%27%234f6f58%27/%3E%20%3C/linearGradient%3E%20%3ClinearGradient%20id%3D%27lg2%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%20%3Cstop%20offset%3D%270%27%20stop-color%3D%27%23d4ddb4%27/%3E%20%3Cstop%20offset%3D%271%27%20stop-color%3D%27%236f8f64%27/%3E%20%3C/linearGradient%3E%20%3C/defs%3E%20%3Cg%20opacity%3D%270.96%27%3E%20%3Cpath%20d%3D%27M298%20305%20C320%20254%2C%20328%20196%2C%20319%20141%20C279%20168%2C%20245%20208%2C%20218%20260%20C243%20277%2C%20269%20292%2C%20298%20305%20Z%27%20fill%3D%27url%28%23lg1%29%27/%3E%20%3Cpath%20d%3D%27M255%20294%20C271%20234%2C%20268%20171%2C%20241%20111%20C202%20146%2C%20173%20191%2C%20155%20245%20C186%20264%2C%20219%20281%2C%20255%20294%20Z%27%20fill%3D%27url%28%23lg2%29%27/%3E%20%3Cpath%20d%3D%27M214%20269%20C225%20215%2C%20218%20156%2C%20188%2095%20C145%20133%2C%20118%20184%2C%20105%20233%20C140%20247%2C%20176%20259%2C%20214%20269%20Z%27%20fill%3D%27url%28%23lg1%29%27/%3E%20%3Cpath%20d%3D%27M323%20237%20C286%20250%2C%20247%20275%2C%20216%20305%27%20stroke%3D%27%236b8d69%27%20stroke-width%3D%275%27%20fill%3D%27none%27%20opacity%3D%27.4%27/%3E%20%3Cpath%20d%3D%27M248%20140%20C213%20176%2C%20182%20227%2C%20163%20283%27%20stroke%3D%27%236b8d69%27%20stroke-width%3D%275%27%20fill%3D%27none%27%20opacity%3D%27.35%27/%3E%20%3Cpath%20d%3D%27M196%20109%20C164%20154%2C%20137%20204%2C%20116%20251%27%20stroke%3D%27%236b8d69%27%20stroke-width%3D%275%27%20fill%3D%27none%27%20opacity%3D%27.35%27/%3E%20%3Cg%20transform%3D%27translate%28192%2C114%29%27%3E%20%3Cpath%20d%3D%27M44%2095%20C61%2069%2C%2087%2049%2C%20116%2036%20C105%2070%2C%2082%2094%2C%2052%20108%20Z%27%20fill%3D%27%23f08a2d%27/%3E%20%3Cpath%20d%3D%27M58%20105%20C79%2079%2C%20107%2060%2C%20139%2046%20C128%2081%2C%20102%20106%2C%2067%20117%20Z%27%20fill%3D%27%23f1b347%27/%3E%20%3Cpath%20d%3D%27M72%20113%20C96%2088%2C%20126%2070%2C%20157%2059%20C144%2092%2C%20117%20118%2C%2083%20128%20Z%27%20fill%3D%27%23e0632c%27/%3E%20%3Cpath%20d%3D%27M41%2098%20C27%2078%2C%2024%2053%2C%2034%2029%20C57%2046%2C%2072%2069%2C%2074%2098%20Z%27%20fill%3D%27%236c8f57%27/%3E%20%3Cpath%20d%3D%27M46%2097%20C33%2082%2C%2030%2065%2C%2033%2047%27%20stroke%3D%27%2336513b%27%20stroke-width%3D%274%27%20fill%3D%27none%27/%3E%20%3Cpath%20d%3D%27M40%2097%20C34%20131%2C%2037%20156%2C%2048%20186%27%20stroke%3D%27%23446a45%27%20stroke-width%3D%275%27%20fill%3D%27none%27/%3E%20%3C/g%3E%20%3C/g%3E%20%3C/svg%3E');transform:scale(.72) rotate(38deg);opacity:.72}
+.hero{min-height:100vh;display:grid;place-items:center;padding-top:108px}
+.hero-card{position:relative;padding:78px 24px 64px;isolation:isolate}
+.hero-card::before{content:'';position:absolute;inset:28px;border:1px solid rgba(197,173,126,.78);transform:rotate(45deg);z-index:-1;background:rgba(255,255,255,.68)}
+.hero-card::after{content:'';position:absolute;inset:0;border:1px solid rgba(197,173,126,.48);border-radius:32px;background:linear-gradient(to bottom, rgba(255,255,255,.62), rgba(255,255,255,.35));z-index:-2;box-shadow:0 14px 44px rgba(103,87,58,.08)}
+.eyebrow{text-transform:uppercase;letter-spacing:.34em;font-size:11px;color:#8b7e68;margin-bottom:10px}
+.script{font:400 clamp(44px,8vw,76px) 'Great Vibes',cursive;color:var(--gold);line-height:1.05;margin:0 0 8px}
+.subtitle{font:400 clamp(26px,4vw,38px) 'Cormorant Garamond',serif;font-style:italic;color:#80705c;margin:0 0 14px}
+.name{font:400 clamp(54px,10vw,110px) 'Great Vibes',cursive;color:var(--gold);line-height:1.06;margin:8px 0 16px}
+.lead{max-width:470px;margin:0 auto 10px}
+.date{font:500 clamp(28px,5vw,40px) 'Cormorant Garamond',serif;letter-spacing:.08em;color:#6d6258}
+.separator{width:92px;border-bottom:1px solid rgba(181,154,105,.72);margin:24px auto}
+.btn{display:inline-block;text-decoration:none;border-radius:999px;padding:12px 24px;margin:8px 6px;font-size:12px;letter-spacing:.04em;border:1px solid transparent;background:var(--gold);color:#fff;box-shadow:0 6px 18px rgba(181,154,105,.20);transition:transform .2s ease, background .2s ease}
+.btn:hover{background:#9d8254;transform:translateY(-2px)}
+.btn.outline{background:transparent;color:var(--gold);border-color:var(--gold);box-shadow:none}
+.card{background:rgba(255,255,255,.62);border:1px solid rgba(201,188,158,.72);border-radius:28px;padding:32px 24px;box-shadow:0 16px 36px rgba(119,104,75,.06)}
+.tag{font:400 22px 'Cormorant Garamond',serif;letter-spacing:.08em;color:var(--gold)}
+.heart{font-size:40px;color:var(--gold)}
+.photos{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:30px auto 18px}
+.polaroid{background:#fff;padding:10px 10px 28px;box-shadow:0 10px 28px rgba(0,0,0,.10);border-radius:2px;transform:rotate(-4deg)}
+.polaroid:nth-child(2){transform:rotate(4deg)}
+.polaroid img{display:block;width:215px;height:245px;object-fit:cover}
+.placeholder-photo{width:215px;height:245px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#ddd6ca,#cfc6b7);color:#6a6358;padding:18px;text-align:center}
+.two-col{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:650px;margin:26px auto 0}
+.panel{background:#c9b89d;color:#fff;border-radius:28px;padding:30px 20px 26px;box-shadow:0 12px 26px rgba(111,93,66,.08)}
+.panel h3{margin:0}
+.panel p:last-child{margin-bottom:0}
+.timeline{max-width:520px;margin:28px auto 0;display:grid;gap:16px}
+.timeline article{display:grid;grid-template-columns:64px 1fr;align-items:center;gap:16px;text-align:left;background:rgba(255,255,255,.55);border:1px solid #ddd1bc;border-radius:20px;padding:16px 16px}
+.emoji{font-size:34px;text-align:center}
+.timeline strong{display:block;font:500 28px 'Cormorant Garamond',serif;color:#7a6a55}
+.dark{background:#52483f;color:#fff}
+.dark .script,.dark .tag{color:#e7d2af}
+.countdown{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:24px 0 0}
+.counter{min-width:78px;padding:14px 12px;border:1px solid rgba(227,215,196,.4);border-radius:18px;background:rgba(255,255,255,.06)}
+.counter b{display:block;font:500 36px 'Cormorant Garamond',serif}
+.counter small{font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.form{max-width:450px;margin:22px auto 0;text-align:left}
+.form label{display:block;font-size:12px;font-weight:600;margin-bottom:4px}
+.form input,.form select,.form textarea{width:100%;padding:13px 14px;border-radius:8px;border:1px solid #d9cfbf;background:#fff;color:var(--ink);font:13px Montserrat,sans-serif;margin:0 0 14px}
+.hint{font-size:11px;color:#85796d}
+.music{position:fixed;z-index:35;right:16px;bottom:16px;width:54px;height:54px;border:0;border-radius:50%;background:var(--gold);color:#fff;font-size:22px;cursor:pointer;box-shadow:0 10px 25px rgba(0,0,0,.18)}
+footer{padding:40px 20px 60px;text-align:center;color:var(--gold);font:400 34px 'Great Vibes',cursive}
+@media (max-width:680px){
+  .hero-card::before{inset:42px 18px}
+}
+@media (max-width:520px){
+  header{padding:0 18px}
+  section{padding:88px 18px 72px}
+  .hero-card{padding:72px 8px 44px}
+  .hero-card::after{border-radius:26px}
+  .name{font-size:66px}
+  .botanical.left,.botanical.right{width:170px;height:185px}
+  .botanical.top-left{width:156px;height:165px;top:86px}
+  .botanical.top-right{width:126px;height:135px;top:96px}
+  .polaroid img,.placeholder-photo{width:165px;height:195px}
+  .two-col{grid-template-columns:1fr}
+  .timeline article{grid-template-columns:56px 1fr}
+}
+
+/* Versión 3: tropical vivo y fecha protagonista */
+:root{--gold:#b38240;--gold-soft:#e4c486;--brown:#4d4438;--taupe:#c7a77a;--paper:#fffaf1;--paper-deep:#f8efd9;--leaf:#356c50;--ink:#584a3b}
+body{background:radial-gradient(circle at 5% 25%,rgba(118,166,104,.16),transparent 24%),radial-gradient(circle at 95% 67%,rgba(245,171,86,.14),transparent 22%),repeating-linear-gradient(135deg,rgba(172,123,49,.018) 0 4px,transparent 4px 9px),var(--paper)}
+.hero-card::after{background:linear-gradient(140deg,rgba(255,255,255,.9),rgba(255,249,230,.72));border-color:rgba(211,163,77,.65);box-shadow:0 20px 50px rgba(135,91,48,.12)}
+.hero-card::before{border-color:#c99e55}
+.botanical{opacity:1;filter:saturate(1.4) contrast(1.08)}
+.script,.name{color:#a97330;text-shadow:0 2px 5px rgba(191,135,48,.13)}
+.panel{background:linear-gradient(145deg,#cfa86d,#ac794e);box-shadow:0 16px 35px rgba(147,99,47,.17)}
+.btn{background:linear-gradient(135deg,#c5934c,#ad7636)}
+.btn:hover{background:#925f2a}
+.wedding-date{display:flex;align-items:center;justify-content:center;gap:18px;margin:28px auto 15px;color:#8c5e30;max-width:440px}
+.wedding-date .date-side{font:500 18px 'Cormorant Garamond',serif;letter-spacing:.13em;text-transform:uppercase;line-height:1.2;min-width:85px}
+.wedding-date .date-side:first-child{text-align:right}
+.wedding-date .date-side:last-child{text-align:left}
+.wedding-date .date-number{display:block;font:400 clamp(78px,15vw,116px)/.88 'Cormorant Garamond',serif;color:#a16a30;text-shadow:0 3px 1px #f0dcc1}
+.wedding-date .date-month{font:400 36px 'Great Vibes',cursive;color:#b27c37;line-height:1.05;margin-top:8px}
+.wedding-date .date-year{font:500 16px 'Cormorant Garamond',serif;letter-spacing:.3em}
+.date-ribbon{display:inline-block;letter-spacing:.18em;text-transform:uppercase;font-size:11px;color:#8b5f32;border-top:1px solid #d5b883;border-bottom:1px solid #d5b883;padding:9px 15px;margin:14px 0 0}
+.feature-photo{max-width:370px;margin:27px auto 20px;padding:12px 12px 32px;background:white;box-shadow:0 15px 34px rgba(80,66,44,.2);transform:rotate(-2deg)}
+.feature-photo img{display:block;width:100%;height:310px;object-fit:cover}
+.photo-pending{height:310px;background:linear-gradient(135deg,#d2dcbf,#e8d4b1);display:flex;align-items:center;justify-content:center;padding:24px;color:#6d654d;text-align:center}
+@media(max-width:520px){.wedding-date{gap:8px}.wedding-date .date-side{min-width:66px;font-size:14px}.wedding-date .date-number{font-size:82px}.wedding-date .date-month{font-size:30px}.feature-photo{max-width:275px}.feature-photo img,.photo-pending{height:270px}}
+
+.discover-center{display:flex;justify-content:center;align-items:center;margin:18px auto 6px;width:100%;text-align:center}
+.discover-center .btn{margin:0 auto}
+
+/* El botón pertenece al final de la primera pantalla, también en celular. */
+.hero{display:flex;flex-direction:column;justify-content:center;min-height:100vh;min-height:100svh;padding-bottom:24px}
+.hero>.inner{width:100%;margin:auto}
+.hero-discover{position:relative;z-index:5;width:100%;display:flex;justify-content:center;align-items:center;flex:0 0 auto;margin:12px auto 0;text-align:center}
+.hero-discover .btn{margin:0;min-width:220px}
+@media(max-width:520px){.hero{padding-bottom:22px}.hero-discover{margin-top:18px}.hero-discover .btn{min-width:205px}}
+
+/* Edición tipográfica: textos secundarios más expresivos y legibles */
+:root{--ink:#4d453d;--brown:#514338;--gold:#ac752e}
+body{font-family:'Montserrat',sans-serif;font-size:16px;line-height:1.85;color:var(--ink);font-weight:400}
+nav a{font-size:15px;font-weight:500;letter-spacing:.025em;color:#574734}
+.eyebrow{font-size:clamp(13px,2.5vw,16px);font-weight:600;letter-spacing:.23em;color:#93632b;text-shadow:0 1px 0 #fff8ed}
+.lead{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(23px,3.5vw,29px);font-weight:500;line-height:1.35;font-style:italic;max-width:540px;color:#684b37;text-wrap:balance}
+section .inner>p:not(.tag):not(.date):not(.hint),.card>p:not(.tag):not(.date),#story{font-size:clamp(16px,2.2vw,18px);line-height:1.95;letter-spacing:.005em;font-weight:500;color:#54473c;max-width:660px;margin-left:auto;margin-right:auto}
+.card>p:not(.tag):not(.date){max-width:535px}
+.tag{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(25px,4vw,32px);line-height:1.25;font-weight:600;color:#8a592c;letter-spacing:.015em}
+#address{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(20px,3vw,24px)!important;font-style:italic;font-weight:600!important;color:#805d3e!important;line-height:1.55!important}
+.date-ribbon{font-size:clamp(13px,2.35vw,16px);font-weight:600;letter-spacing:.095em;color:#875522;line-height:1.5;background:rgba(255,248,229,.74);border-top:1px solid #bb8d50;border-bottom:1px solid #bb8d50;padding:12px 18px;max-width:95%}
+.wedding-date .date-side{font-size:clamp(15px,2.8vw,20px);font-weight:600;color:#79532b;letter-spacing:.08em}
+.wedding-date .date-year{font-size:19px;color:#7e5025;font-weight:600}
+.btn{font-size:14px;font-weight:600;letter-spacing:.035em;padding:13px 26px}
+.panel{background:linear-gradient(145deg,#b68d58,#886c48);box-shadow:0 13px 28px rgba(92,59,27,.15)}
+.panel p{font-size:17px;line-height:1.75;font-weight:500;color:#fffdf7}
+.panel .script{color:#fff4dc}
+.timeline article>div:last-child{font-size:16px;color:#554539;font-weight:500}
+.timeline strong{font-size:31px;color:#8b602f}
+.counter small{font-size:13px;letter-spacing:.075em;font-weight:600;color:#f7e5c8}
+.counter b{font-size:43px}
+.form label{font-size:15px;color:#684a2d;font-weight:600}
+.form input,.form select,.form textarea{font-size:15px;line-height:1.5;color:#4b4038}
+.hint{font-size:13px;line-height:1.7;font-weight:500;color:#716052}
+#countHint{color:#fff1d9!important}
+footer{font-size:clamp(37px,6vw,50px)}
+@media(max-width:520px){body{font-size:15.5px}.hero-card{padding-left:10px;padding-right:10px}.lead{font-size:23px}.eyebrow{font-size:13px}.date-ribbon{font-size:13px;letter-spacing:.025em}.wedding-date .date-side{font-size:15px}.wedding-date .date-year{font-size:17px}.tag{font-size:27px}.btn{font-size:14px}.hint{font-size:12.5px}.hero-discover .btn{padding:13px 23px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fade{transition:none}}
+
+
+/* Galería: fotografías tipo Polaroid, adaptadas al celular */
+.gallery-heading{margin:56px auto 25px}
+.gallery-kicker{display:block;color:#986e55;text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:600}
+.gallery-title{font-size:clamp(43px,7vw,64px);margin:12px 0}
+.gallery-grid{max-width:1040px;margin:26px auto 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px 16px;padding:10px}
+.gallery-shot{position:relative;display:block;width:100%;padding:8px 8px 29px;border:0;background:#fff;box-shadow:0 8px 22px rgba(59,44,36,.17);cursor:zoom-in;transform:rotate(-2deg);transition:transform .25s ease,box-shadow .25s ease;min-width:0}
+.gallery-shot:nth-child(3n+2){transform:rotate(2.5deg)}
+.gallery-shot:nth-child(5n){transform:rotate(-1deg)}
+.gallery-shot:hover,.gallery-shot:focus-visible{transform:rotate(0) translateY(-5px) scale(1.025);box-shadow:0 14px 30px rgba(59,44,36,.25);outline-color:#b59a69}
+.gallery-shot img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center}
+.photo-number{position:absolute;right:13px;bottom:5px;font:italic 17px 'Cormorant Garamond',serif;color:#a38864}
+.gallery-note{color:#826a58;font:italic 21px 'Cormorant Garamond',serif;margin-top:24px}
+.lightbox{position:fixed;inset:0;z-index:95;background:rgba(21,26,23,.94);display:none;align-items:center;justify-content:center;flex-direction:column;padding:45px 12px 25px;gap:12px}
+.lightbox.open{display:flex}
+.lightbox img{display:block;max-width:min(94vw,1100px);max-height:78vh;object-fit:contain;border:5px solid #f6f0e5;box-shadow:0 12px 32px #0009}
+.lightbox button{border:1px solid rgba(255,255,255,.45);background:rgba(39,39,39,.5);color:white;border-radius:50%;width:44px;height:44px;font-size:24px;cursor:pointer}
+.lightbox-close{position:absolute;top:12px;right:15px}
+.lightbox-prev,.lightbox-next{position:absolute;top:50%}
+.lightbox-prev{left:10px}.lightbox-next{right:10px}
+.lightbox-count{color:#f8f2e5;font:18px 'Cormorant Garamond',serif;letter-spacing:.1em}
+@media(max-width:800px){.gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}}
+@media(max-width:520px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px;padding:7px}.gallery-shot{padding:6px 6px 25px}.lightbox-prev,.lightbox-next{top:auto;bottom:21px}.lightbox-count{margin-bottom:43px}.lightbox img{max-height:71vh}}
+@media(prefers-reduced-motion:reduce){.gallery-shot{transition:none}}
+
+
+/* Mini galería elegante */
+.main-photo-wrap{margin:30px auto 12px}
+.main-photo-wrap .feature-photo{max-width:430px;transform:rotate(-1.4deg)}
+.main-photo-wrap .feature-photo img{height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center}
+.main-photo-caption{margin-top:8px;color:#8a6b50;font:italic 18px 'Cormorant Garamond',serif}
+.mini-gallery{max-width:900px;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px 12px;padding:4px 0 0}
+.mini-gallery .gallery-shot{padding:6px 6px 24px;box-shadow:0 7px 18px rgba(59,44,36,.13)}
+.mini-gallery .gallery-shot img{aspect-ratio:1/1.12}
+.mini-gallery .photo-number{font-size:15px;right:10px;bottom:4px}
+@media(max-width:920px){.mini-gallery{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:680px){.mini-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:520px){.main-photo-wrap .feature-photo{max-width:285px}.mini-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 10px}}
+
+
+.music-notice[hidden]{display:none!important}
+.music-notice{position:fixed;z-index:90;bottom:82px;left:50%;transform:translateX(-50%);width:min(92vw,420px);display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px;padding:16px;background:#fffaf1;color:#62482c;border:1px solid #c99e55;border-radius:18px;box-shadow:0 12px 34px #0002;font-size:15px;font-weight:600}
+.music-notice button{background:#ad7636;color:white;border:0;border-radius:30px;padding:10px 16px;cursor:pointer;font-weight:600}
+.music-notice #hideMusicNotice{background:transparent;color:#59442b;font-size:23px;padding:0 5px}
+
+/* Tarjeta de regalo y transferencia */
+.bank-backdrop[hidden]{display:none!important}
+.bank-backdrop{position:fixed;inset:0;z-index:120;background:rgba(26,30,26,.76);backdrop-filter:blur(5px);display:flex;justify-content:center;align-items:center;padding:18px;overflow:auto}
+.bank-dialog{background:linear-gradient(160deg,#fffcf3,#f8edd7);border:1px solid #cfaa6c;box-shadow:0 22px 65px #0005;border-radius:24px;max-width:520px;width:100%;max-height:calc(100dvh - 36px);overflow-y:auto;position:relative;padding:27px clamp(20px,5vw,38px) 27px;text-align:center}
+.bank-close{position:absolute;right:12px;top:8px;background:transparent;border:0;font-size:34px;color:#805626;cursor:pointer}
+.bank-decor{color:#b18243;font:36px 'Cormorant Garamond',serif}
+.bank-dialog .script{font-size:clamp(38px,8vw,56px);line-height:1.15;margin:5px 0 12px}
+.bank-intro{font:500 19px/1.4 'Cormorant Garamond',serif;color:#5e4935;margin:0 0 18px}
+.bank-fields{margin:0;text-align:left;border-top:1px solid #dcc8a7}
+.bank-fields>div{display:grid;grid-template-columns:36% 1fr;gap:12px;align-items:center;border-bottom:1px solid #dcc8a7;padding:10px 0}
+.bank-fields dt{font:600 12px/1.3 Montserrat,sans-serif;color:#94652d;text-transform:uppercase;letter-spacing:.045em}
+.bank-fields dd{font:500 clamp(14px,3vw,16px)/1.45 Montserrat,sans-serif;margin:0;overflow-wrap:anywhere;color:#3b352e}
+.bank-copy{margin-top:20px}
+.bank-copy-feedback{min-height:1.5em;font-size:13px;color:#52754c}
+@media(max-width:420px){.bank-dialog{padding:24px 17px}.bank-fields>div{grid-template-columns:34% 1fr;gap:10px}}
+
+</style>
+</head>
+<body>
+<header>
+<div class="monogram" id="logo">L ♡ M</div>
+<button aria-expanded="false" aria-label="Abrir menú" class="menu-btn" id="menuBtn">☰</button>
+</header>
+<nav id="menu">
+<a href="#inicio">Inicio</a>
+<a href="#cuando">Fecha y lugar</a>
+<a href="#historia">Nuestra historia</a>
+<a href="#vestimenta">Regalos</a>
+<a href="#itinerario">Itinerario</a>
+<a href="#cuenta">Cuenta regresiva</a>
+<a href="#confirmar">Confirmar asistencia</a>
+<a href="#fotos">Comparte tus fotos</a>
+</nav>
+<main>
+<section class="hero" id="inicio">
+<div class="botanical top-left"></div>
+<div class="botanical right"></div>
+<div class="inner fade">
+<div class="hero-card">
+<div class="eyebrow">Nuestra boda</div>
+<p class="subtitle">¡Nos casamos!</p>
+<h1 class="name" id="names">Lisette &amp; Mauricio</h1>
+<p class="lead">Queremos celebrar contigo el momento más especial de nuestra historia y compartir la alegría de nuestra unión.</p>
+<div class="separator"></div>
+<div aria-label="Sábado 27 de marzo de 2027" class="wedding-date"><span class="date-side">Sábado<br/>Marzo</span><div><span class="date-number">27</span><div class="date-month">marzo</div><div class="date-year">2027</div></div><span class="date-side">A las<br/>18:00</span></div><div class="date-ribbon">Centro de Eventos BancoEstado · Chillán</div>
+</div>
+</div>
+<div class="hero-discover"><a class="btn" href="#cuando">Descubrir la invitación ↓</a></div>
+</section>
+<section id="cuando">
+<div class="botanical left"></div>
+<div class="botanical top-right"></div>
+<div class="inner fade">
+<div class="card">
+<h2 class="script">Nos casamos</h2>
+<p class="tag" id="fullDate">Sábado 27 de marzo de 2027 · 18:00 hrs</p>
+<p>Para nosotros es fundamental compartir la alegría de nuestra unión contigo. ¡Te esperamos para vivir una noche inolvidable!</p>
+<div class="separator"></div>
+<div class="heart">♡</div>
+<h3 class="tag" id="venue">Centro de Eventos BancoEstado</h3>
+<p id="address">Chillán, Región de Ñuble · Dirección exacta por confirmar</p>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Centro+de+Eventos+BancoEstado+Chill%C3%A1n" id="maps" rel="noopener" target="_blank">Abrir en Google Maps 📍</a>
+</div>
+</div>
+</section>
+<section class="paper" id="historia">
+<div class="botanical left"></div>
+<div class="botanical top-right"></div>
+<div class="inner fade">
+<h2 class="script">Nuestra historia</h2>
+<p id="story">Nuestra historia está llena de momentos inolvidables, sonrisas y sueños compartidos. Hoy comenzamos un nuevo capítulo y nos encantaría que fueras parte de él.</p>
+<div class="main-photo-wrap">
+  <div class="feature-photo">
+    <img alt="Lisette y Mauricio en el mirador" src="principal.jpg"/>
+  </div>
+  <div class="main-photo-caption">Nuestro recuerdo favorito, como foto principal ♡</div>
+</div>
+<div class="gallery-heading">
+  <span class="gallery-kicker">Nuestros recuerdos</span>
+  <h3 class="gallery-title script">Pequeña galería</h3>
+</div>
+<div class="gallery-grid mini-gallery" id="galleryGrid">
+  <button class="gallery-shot" data-src="galeria-01.jpg" type="button"><img alt="Recuerdo 1" src="galeria-01.jpg"/><span class="photo-number">01</span></button>
+  <button class="gallery-shot" data-src="galeria-02.jpg" type="button"><img alt="Recuerdo 2" src="galeria-02.jpg"/><span class="photo-number">02</span></button>
+  <button class="gallery-shot" data-src="galeria-03.jpg" type="button"><img alt="Recuerdo 3" src="galeria-03.jpg"/><span class="photo-number">03</span></button>
+  <button class="gallery-shot" data-src="galeria-04.jpg" type="button"><img alt="Recuerdo 4" src="galeria-04.jpg"/><span class="photo-number">04</span></button>
+  <button class="gallery-shot" data-src="galeria-05.jpg" type="button"><img alt="Recuerdo 5" src="galeria-05.jpg"/><span class="photo-number">05</span></button>
+  <button class="gallery-shot" data-src="galeria-06.jpg" type="button"><img alt="Recuerdo 6" src="galeria-06.jpg"/><span class="photo-number">06</span></button>
+  <button class="gallery-shot" data-src="galeria-07.jpg" type="button"><img alt="Recuerdo 7" src="galeria-07.jpg"/><span class="photo-number">07</span></button>
+  <button class="gallery-shot" data-src="galeria-08.jpg" type="button"><img alt="Recuerdo 8" src="galeria-08.jpg"/><span class="photo-number">08</span></button>
+  <button class="gallery-shot" data-src="galeria-09.jpg" type="button"><img alt="Recuerdo 9" src="galeria-09.jpg"/><span class="photo-number">09</span></button>
+  <button class="gallery-shot" data-src="galeria-10.jpg" type="button"><img alt="Recuerdo 10" src="galeria-10.jpg"/><span class="photo-number">10</span></button>
+  <button class="gallery-shot" data-src="galeria-11.jpg" type="button"><img alt="Recuerdo 11" src="galeria-11.jpg"/><span class="photo-number">11</span></button>
+</div>
+<p class="gallery-note">Toca cualquier fotografía para verla en grande.</p>
+</div>
+</section>
+<section id="vestimenta">
+<div class="botanical top-left"></div>
+<div class="botanical right"></div>
+<div class="inner fade">
+<h2 class="script">Un detalle especial</h2>
+<div class="two-col" style="grid-template-columns:minmax(0,1fr);max-width:420px">
+<div class="panel">
+<p style="font-size:38px;margin:0">🎁</p>
+<h3 class="script" style="font-size:48px">Regalos</h3>
+<p>Tu presencia es nuestro mejor regalo. Si deseas hacernos un presente, puedes ver nuestros datos para una transferencia.</p>
+<button class="btn outline" id="giftBtn" style="border-color:white;color:white">Ver detalles</button>
+</div>
+</div>
+</div>
+</section>
+<section class="paper" id="itinerario">
+<div class="botanical left"></div>
+<div class="botanical top-right"></div>
+<div class="inner fade">
+<h2 class="script">Itinerario</h2>
+<div class="timeline">
+<article><div class="emoji">💍</div><div><strong>Ceremonia</strong><div id="time1">18:00 hrs</div></div></article>
+<article><div class="emoji">🥂</div><div><strong>Cóctel</strong><div id="time2">Por confirmar</div></div></article>
+<article><div class="emoji">🍽️</div><div><strong>Cena</strong><div id="time3">Por confirmar</div></div></article>
+<article><div class="emoji">🎉</div><div><strong>Fiesta</strong><div id="time4">Por confirmar</div></div></article>
+</div>
+</div>
+</section>
+<section class="dark" id="cuenta">
+<div class="inner fade">
+<h2 class="script">Cuenta regresiva</h2>
+<p>¡Ya queda menos para nuestro gran día!</p>
+<div class="countdown">
+<div class="counter"><b id="days">--</b><small>Días</small></div>
+<div class="counter"><b id="hours">--</b><small>Horas</small></div>
+<div class="counter"><b id="minutes">--</b><small>Minutos</small></div>
+<div class="counter"><b id="seconds">--</b><small>Segundos</small></div>
+</div>
+<p class="hint" id="countHint" style="color:#e6dac9">Contando los días para celebrar juntos.</p>
+</div>
+</section>
+<section id="confirmar">
+<div class="botanical top-left"></div>
+<div class="botanical right"></div>
+<div class="inner fade">
+<h2 class="script">Confirma tu asistencia</h2>
+<p>Nos haría muy felices compartir este día contigo. Confirma tu asistencia para que podamos prepararlo todo.</p>
+<form class="form" id="rsvp">
+<label for="guest">Sus nombres</label>
+<input id="guest" placeholder="Escriban sus nombres" required=""/>
+<label for="answer">¿Podrás acompañarnos?</label>
+<select id="answer">
+<option value="Sí, asistiré">Sí, asistiré</option>
+<option value="No podré asistir">No podré asistir</option>
+</select>
+<button class="btn" type="submit">Confirmar por WhatsApp 💬</button>
+</form>
+<p class="hint">Al pulsar el botón se abrirá WhatsApp con el mensaje listo para enviar. El invitado solo deberá presionar Enviar.</p>
+</div>
+</section>
+<section class="paper" id="fotos">
+<div class="botanical left"></div>
+<div class="botanical top-right"></div>
+<div class="inner fade">
+<h2 class="script">Sube tus fotos</h2>
+<p>Ayúdanos a conservar los mejores recuerdos. ¡Comparte las fotos que tomes en nuestro matrimonio!</p>
+<a class="btn" id="album" rel="noopener" target="_blank">Ir al álbum 📷</a>
+
+</div>
+</section>
+</main>
+
+<div class="bank-backdrop" id="bankModal" role="dialog" aria-modal="true" aria-labelledby="bankHeading" hidden>
+  <div class="bank-dialog">
+    <button id="closeBank" class="bank-close" type="button" aria-label="Cerrar datos bancarios">×</button>
+    <div class="bank-decor">♡</div>
+    <h2 id="bankHeading" class="script">Un detalle para nosotros</h2>
+    <p class="bank-intro">Tu presencia es el regalo más importante. Si deseas hacernos un presente, estos son nuestros datos:</p>
+    <dl class="bank-fields">
+      <div><dt>Titular</dt><dd>Mauricio Arroyo</dd></div>
+      <div><dt>RUT</dt><dd>16.214.941-5</dd></div>
+      <div><dt>Banco</dt><dd>Banco Falabella</dd></div>
+      <div><dt>Tipo de cuenta</dt><dd>Cuenta corriente</dd></div>
+      <div><dt>Número de cuenta</dt><dd>19991462321</dd></div>
+      <div><dt>Correo</dt><dd>mauriarroyoc@gmail.com</dd></div>
+    </dl>
+    <button id="copyBank" type="button" class="btn bank-copy">Copiar datos bancarios</button>
+    <p class="bank-copy-feedback" id="bankFeedback" aria-live="polite"></p>
+  </div>
+</div>
+
+<div aria-hidden="true" class="lightbox" id="lightbox">
+  <button aria-label="Cerrar" class="lightbox-close" type="button">×</button>
+  <button aria-label="Anterior" class="lightbox-prev" type="button">‹</button>
+  <img alt="Fotografía ampliada" id="lightboxImg" src=""/>
+  <button aria-label="Siguiente" class="lightbox-next" type="button">›</button>
+  <div class="lightbox-count" id="lightboxCount"></div>
+</div>
+
+<footer>Con amor, <span id="footerNames">Lisette y Mauricio</span> ♡</footer>
+<button aria-label="Reproducir música" class="music" id="musicBtn" title="Reproducir música">♫</button>
+<audio id="audio" loop="" preload="auto" autoplay playsinline></audio>
+<div class="music-notice" id="musicNotice" hidden><span>🎶 Disfruta nuestra canción</span><button type="button" id="startMusic">Activar música ♫</button><button type="button" id="hideMusicNotice" aria-label="Cerrar aviso">×</button></div>
+
+<script>
+const CONFIG = {
+ nombre1: 'Lisette',
+ nombre2: 'Mauricio',
+ fecha: '2027-03-27T18:00:00-03:00',
+ fechaTexto: 'Sábado 27 de marzo de 2027 · 18:00 hrs',
+ lugar: 'Centro de Eventos BancoEstado',
+ direccion: 'Chillán, Región de Ñuble · Dirección exacta por confirmar',
+ mapsURL: 'https://www.google.com/maps/search/?api=1&query=Centro+de+Eventos+BancoEstado+Chill%C3%A1n',
+ historia: 'Nuestra historia está llena de momentos inolvidables, sonrisas y sueños compartidos. Hoy comenzamos un nuevo capítulo y nos encantaría que fueras parte de él.',
+ horarios: ['18:00 hrs','Por confirmar','Por confirmar','Por confirmar'],
+ whatsapp: '',
+ regalos: 'Tu presencia es el regalo más importante. ¡Gracias por acompañarnos!',
+ albumURL: '',
+ musicaArchivo: 'musica.mp3',
+};
+const $ = id => document.getElementById(id);
+$('names').textContent = CONFIG.nombre1 + ' & ' + CONFIG.nombre2;
+$('footerNames').textContent = CONFIG.nombre1 + ' y ' + CONFIG.nombre2;
+$('logo').textContent = CONFIG.nombre1[0] + ' y ' + CONFIG.nombre2[0];
+
+$('fullDate').textContent = CONFIG.fechaTexto;
+$('venue').textContent = CONFIG.lugar;
+$('address').textContent = CONFIG.direccion;
+$('maps').href = CONFIG.mapsURL || 'https://maps.google.com';
+$('story').textContent = CONFIG.historia;
+
+['time1','time2','time3','time4'].forEach((id,i)=>$(id).textContent = CONFIG.horarios[i]);
+
+for (const [id,url] of [['album',CONFIG.albumURL]]) {
+  if(url) $(id).href=url;
+  else {
+    $(id).removeAttribute('href');
+    $(id).onclick = e => { e.preventDefault(); alert('Pronto estará disponible.'); }
+  }
+}
+$('menuBtn').onclick = () => {
+  const open = $('menu').classList.toggle('open');
+  $('menuBtn').setAttribute('aria-expanded', String(open));
+};
+document.querySelectorAll('nav a').forEach(link => link.onclick = () => $('menu').classList.remove('open'));
+const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:.12});
+document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+function tick(){
+  const left = new Date(CONFIG.fecha).getTime() - Date.now();
+  if(!Number.isFinite(left)) return;
+  const s = Math.max(0, Math.floor(left/1000));
+  $('days').textContent = Math.floor(s/86400);
+  $('hours').textContent = String(Math.floor((s%86400)/3600)).padStart(2,'0');
+  $('minutes').textContent = String(Math.floor((s%3600)/60)).padStart(2,'0');
+  $('seconds').textContent = String(s%60).padStart(2,'0');
+  $('countHint').textContent = s===0 ? '¡Llegó el gran día!' : 'Contando los días para celebrar juntos.';
+}
+tick(); setInterval(tick,1000);
+$('rsvp').onsubmit = e => {
+  e.preventDefault();
+  if(!CONFIG.whatsapp) { alert('Debemos agregar el número de WhatsApp de confirmaciones antes de publicar.'); return; }
+  const msg = `¡Hola! Somos ${$('guest').value.trim()}.
+Confirmación: ${$('answer').value}.`;
+  window.open('https://wa.me/' + CONFIG.whatsapp.replace(/\D/g,'') + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+};
+const audio = $('audio');
+audio.src = CONFIG.musicaArchivo;
+function updateMusicButton() {
+  const playing = !audio.paused;
+  $('musicBtn').textContent = playing ? '❚❚' : '♫';
+  $('musicBtn').setAttribute('aria-label', playing ? 'Pausar música' : 'Reproducir música');
+  $('musicBtn').title = playing ? 'Pausar música' : 'Reproducir música';
+}
+audio.addEventListener('play', () => { updateMusicButton(); $('musicNotice').hidden = true; });
+// Los navegadores móviles y de escritorio pueden impedir la reproducción con sonido
+// sin una interacción previa. Se intenta al abrir y se ofrece una alternativa visible.
+async function iniciarMusicaAlAbrir(){
+  try { await audio.play(); }
+  catch (_) { $('musicNotice').hidden = false; updateMusicButton(); }
+}
+$('startMusic').addEventListener('click', async () => {
+  try { await audio.play(); }
+  catch (_) { alert('No se pudo iniciar la música. Revisa que musica.mp3 esté en la misma carpeta.'); }
+});
+$('hideMusicNotice').addEventListener('click', () => { $('musicNotice').hidden = true; });
+window.addEventListener('load', iniciarMusicaAlAbrir);
+
+audio.addEventListener('pause', updateMusicButton);
+$('musicBtn').onclick = async () => {
+  if (!audio.paused) { audio.pause(); return; }
+  try { await audio.play(); }
+  catch (e) { alert('No se pudo reproducir la música. Comprueba que el archivo musica.mp3 esté junto a index.html.'); }
+};
+// El botón de la portada inicia la música por acción directa del invitado.
+document.querySelector('.hero-discover a').addEventListener('click', () => {
+  if (audio.paused) audio.play().catch(() => updateMusicButton());
+});
+
+
+const galleryShots = Array.from(document.querySelectorAll('#galleryGrid .gallery-shot'));
+const lightbox = $('lightbox');
+const lightboxImg = $('lightboxImg');
+const lightboxCount = $('lightboxCount');
+let currentPhoto = 0;
+function showPhoto(index){
+  currentPhoto = (index + galleryShots.length) % galleryShots.length;
+  lightboxImg.src = galleryShots[currentPhoto].dataset.src;
+  lightboxCount.textContent = `${String(currentPhoto + 1).padStart(2,'0')} / ${String(galleryShots.length).padStart(2,'0')}`;
+}
+function openLightbox(index){
+  showPhoto(index);
+  lightbox.classList.add('open');
+  lightbox.setAttribute('aria-hidden','false');
+}
+function closeLightbox(){
+  lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden','true');
+  lightboxImg.src='';
+}
+galleryShots.forEach((btn,index)=>btn.addEventListener('click',()=>openLightbox(index)));
+document.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+document.querySelector('.lightbox-prev').addEventListener('click',()=>showPhoto(currentPhoto-1));
+document.querySelector('.lightbox-next').addEventListener('click',()=>showPhoto(currentPhoto+1));
+lightbox.addEventListener('click',e=>{ if(e.target===lightbox) closeLightbox(); });
+document.addEventListener('keydown',e=>{
+  if(!lightbox.classList.contains('open')) return;
+  if(e.key==='Escape') closeLightbox();
+  if(e.key==='ArrowLeft') showPhoto(currentPhoto-1);
+  if(e.key==='ArrowRight') showPhoto(currentPhoto+1);
+});
+
+
+// Datos bancarios: tarjeta elegante y botón para copiar.
+const bankModal = $('bankModal');
+const bankText = [
+  'Titular: Mauricio Arroyo',
+  'RUT: 16.214.941-5',
+  'Banco: Banco Falabella',
+  'Tipo de cuenta: Cuenta corriente',
+  'Número de cuenta: 19991462321',
+  'Correo: mauriarroyoc@gmail.com'
+].join('\n');
+const closeBankModal = () => { bankModal.hidden = true; document.body.style.overflow = ''; $('giftBtn').focus(); };
+$('giftBtn').addEventListener('click', () => { bankModal.hidden = false; $('bankFeedback').textContent = ''; document.body.style.overflow = 'hidden'; $('closeBank').focus(); });
+$('closeBank').addEventListener('click', closeBankModal);
+bankModal.addEventListener('click', e => { if (e.target === bankModal) closeBankModal(); });
+document.addEventListener('keydown', e => { if (!bankModal.hidden && e.key === 'Escape') closeBankModal(); });
+$('copyBank').addEventListener('click', async () => {
+  try {
+    if(navigator.clipboard?.writeText) await navigator.clipboard.writeText(bankText);
+    else {
+      const temp = document.createElement('textarea'); temp.value=bankText; temp.style.position='fixed'; temp.style.opacity='0';
+      document.body.appendChild(temp); temp.select();
+      const copied=document.execCommand('copy'); temp.remove(); if(!copied) throw Error('No se pudo copiar');
+    }
+    $('bankFeedback').textContent='¡Datos copiados! ♡';
+  } catch(e) { $('bankFeedback').textContent='Selecciona y copia los datos de la tarjeta.'; }
+});
+
+</script>
+</body>
+</html>
