@@ -246,7 +246,6 @@ footer{font-size:clamp(37px,6vw,50px)}
 <a href="#itinerario">Itinerario</a>
 <a href="#cuenta">Cuenta regresiva</a>
 <a href="#confirmar">Confirmar asistencia</a>
-<a href="#fotos">Comparte tus fotos</a>
 </nav>
 <main>
 <section class="hero" id="inicio">
@@ -372,16 +371,6 @@ footer{font-size:clamp(37px,6vw,50px)}
 <p class="hint">Al pulsar el botón se abrirá WhatsApp con el mensaje listo para enviar. El invitado solo deberá presionar Enviar.</p>
 </div>
 </section>
-<section class="paper" id="fotos">
-<div class="botanical left"></div>
-<div class="botanical top-right"></div>
-<div class="inner fade">
-<h2 class="script">Sube tus fotos</h2>
-<p>Ayúdanos a conservar los mejores recuerdos. Comparte aquí las fotos que tomes en nuestro matrimonio.</p>
-<a class="btn" id="album" rel="noopener" target="_blank">Subir mis fotografías 📷</a>
-
-</div>
-</section>
 </main>
 
 <div class="bank-backdrop" id="bankModal" role="dialog" aria-modal="true" aria-labelledby="bankHeading" hidden>
@@ -429,7 +418,6 @@ const CONFIG = {
  horarios: ['18:00 hrs','Luego, un brindis para celebrar nuestro amor.','Continuaremos compartiendo una cena especial.','Y para cerrar, ¡bailemos y celebremos juntos!'],
  whatsapp: '56934374582',
  regalos: 'Tu presencia es el regalo más importante. ¡Gracias por acompañarnos!',
- albumURL: 'https://www.dropbox.com/request/o8t4tprzr79buzk1o9f1',
  musicaArchivo: 'musica.mp3',
 };
 const $ = id => document.getElementById(id);
@@ -445,13 +433,6 @@ $('story').textContent = CONFIG.historia;
 
 ['time1','time2','time3','time4'].forEach((id,i)=>$(id).textContent = CONFIG.horarios[i]);
 
-for (const [id,url] of [['album',CONFIG.albumURL]]) {
-  if(url) $(id).href=url;
-  else {
-    $(id).removeAttribute('href');
-    $(id).onclick = e => { e.preventDefault(); alert('Pronto estará disponible.'); }
-  }
-}
 $('menuBtn').onclick = () => {
   const open = $('menu').classList.toggle('open');
   $('menuBtn').setAttribute('aria-expanded', String(open));
