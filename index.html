@@ -473,7 +473,7 @@ tick(); setInterval(tick,1000);
 $('rsvp').onsubmit = e => {
   e.preventDefault();
   if(!CONFIG.whatsapp) { alert('Debemos agregar el número de WhatsApp de confirmaciones antes de publicar.'); return; }
-  const msg = `¡Hola! Somos ${$('guest').value.trim()}.
+  const msg = `Hola, soy ${$('guest').value.trim()}.
 Confirmación: ${$('answer').value}.`;
   window.open('https://wa.me/' + CONFIG.whatsapp.replace(/\D/g,'') + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
 };
