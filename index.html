@@ -246,7 +246,7 @@ footer{font-size:clamp(37px,6vw,50px)}
 <a href="#itinerario">Itinerario</a>
 <a href="#cuenta">Cuenta regresiva</a>
 <a href="#confirmar">Confirmar asistencia</a>
-
+<a href="#fotos">Comparte tus fotos</a>
 </nav>
 <main>
 <section class="hero" id="inicio">
@@ -360,8 +360,8 @@ footer{font-size:clamp(37px,6vw,50px)}
 <h2 class="script">Confirma tu asistencia</h2>
 <p>Nos haría muy felices compartir este día contigo. Confirma tu asistencia para que podamos prepararlo todo.</p>
 <form class="form" id="rsvp">
-<label for="guest">Sus nombres</label>
-<input id="guest" placeholder="Escriban sus nombres" required=""/>
+<label for="guest">Nombre</label>
+<input id="guest" placeholder="Escribe tu nombre" required=""/>
 <label for="answer">¿Podrás acompañarnos?</label>
 <select id="answer">
 <option value="Sí, asistiré">Sí, asistiré</option>
@@ -370,6 +370,16 @@ footer{font-size:clamp(37px,6vw,50px)}
 <button class="btn" type="submit">Confirmar por WhatsApp 💬</button>
 </form>
 <p class="hint">Al pulsar el botón se abrirá WhatsApp con el mensaje listo para enviar. El invitado solo deberá presionar Enviar.</p>
+</div>
+</section>
+<section class="paper" id="fotos">
+<div class="botanical left"></div>
+<div class="botanical top-right"></div>
+<div class="inner fade">
+<h2 class="script">Sube tus fotos</h2>
+<p>Ayúdanos a conservar los mejores recuerdos. Comparte aquí las fotos que tomes en nuestro matrimonio.</p>
+<a class="btn" id="album" rel="noopener" target="_blank">Subir mis fotografías 📷</a>
+
 </div>
 </section>
 </main>
@@ -419,6 +429,7 @@ const CONFIG = {
  horarios: ['18:00 hrs','Luego, un brindis para celebrar nuestro amor.','Continuaremos compartiendo una cena especial.','Y para cerrar, ¡bailemos y celebremos juntos!'],
  whatsapp: '56934374582',
  regalos: 'Tu presencia es el regalo más importante. ¡Gracias por acompañarnos!',
+ albumURL: 'https://www.dropbox.com/request/o8t4tprzr79buzk1o9f1',
  musicaArchivo: 'musica.mp3',
 };
 const $ = id => document.getElementById(id);
@@ -434,6 +445,13 @@ $('story').textContent = CONFIG.historia;
 
 ['time1','time2','time3','time4'].forEach((id,i)=>$(id).textContent = CONFIG.horarios[i]);
 
+for (const [id,url] of [['album',CONFIG.albumURL]]) {
+  if(url) $(id).href=url;
+  else {
+    $(id).removeAttribute('href');
+    $(id).onclick = e => { e.preventDefault(); alert('Pronto estará disponible.'); }
+  }
+}
 $('menuBtn').onclick = () => {
   const open = $('menu').classList.toggle('open');
   $('menuBtn').setAttribute('aria-expanded', String(open));
